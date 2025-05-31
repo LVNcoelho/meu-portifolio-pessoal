@@ -1,21 +1,24 @@
-h1 {
-    color: 8ACCD 5px;
-    background-color: #8accd5;
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f3f4;
+    color: #333;
 }
 
-a img {
-    border: 3px solid #3b546e;
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
 }
 
-a h2 {
-    color: #ee94b8;
-    background-color: #ee94b8;
-}
-li{
-    font-size: 20px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-   
-}
-title{
-    font-size: ;
+header img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    display: block;
+    margin: 20px auto;
 }
