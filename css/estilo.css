@@ -1,14 +1,57 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Lato', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f5f3f4;
+    background-color: #f3c7e6;
+    /* Mantido o Off-white bem suave */
     color: #333;
 }
 
+header {
+    background-image: url('../../Purple Black Modern Marketing Plan Presentation.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.botao-contato {
+    display: inline-block; /* Permite definir padding, width, height */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    background-color: #615997; /* Cor de fundo roxo suave */
+    color: white; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado padrão do link */
+    text-align: right;
+    border-radius: 5px; /* Cantos arredondados */
+    font-weight: bold; /* Texto em negrito */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave para hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+}
+.botao-contato:hover {
+    background-color: #483d8b; /* Cor mais escura ao passar o mouse */
+    transform: translateY(-2px); /* Pequeno efeito de "levitar" */
+    text-decoration: none; /* Garante que não sublinhe no hover */
+}
+@keyframes botaoPulsar {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+        transform: scale(1.05); /* Aumenta um pouco */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Aumenta a sombra */
+    }
+    100% {
+        transform: scale(1); /* Volta ao normal */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+}
+.botao-clicado {
+    animation: botaoPulsar 0.4s ease-out; /* Nome da animação, duração, easing */
+}
+
 .container {
-    width: 80%;
+    width: 90%;
+    /* Ajustado para 90% para ter um respiro nas laterais em telas maiores */
     max-width: 1200px;
     margin: auto;
     overflow: hidden;
@@ -16,9 +59,170 @@ body {
 }
 
 header img {
-    width: 150px;
+    width: 200px;
     height: auto;
     border-radius: 50%;
     display: block;
     margin: 20px auto;
+
+    border: 5px solid #9b9bd1;
 }
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #335579;
+}
+
+img:not(header img) {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilização para a linha divisória (hr) */
+hr {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #8A2BE2, rgba(0, 0, 0, 0));
+    /* Linha roxa suave */
+    margin: 40px auto;
+    /* Aumenta o espaçamento em volta */
+    width: 50%;
+    /* Faz a linha ser menor e centralizada */
+}
+
+/* FILMES FAVORITOS */
+ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto 50px auto;
+    /* Adiciona margem inferior para separar da próxima seção */
+    max-width: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+ol li {
+    margin-bottom: 20px;
+    /* Reduz a margem entre filmes em uma mesma linha */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Ajusta a largura para ser mais flexível, mantendo um tamanho mínimo */
+    flex-basis: 280px;
+    /* Largura base para cada item para acomodar imagem maior */
+    max-width: 100%;
+    /* Garante que não exceda o container */
+}
+
+ol li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #4f5e4f;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+ol li a:hover {
+    color: #6b8e23;
+    text-decoration: underline;
+}
+
+ol li a img {
+    margin-top: 15px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    width: 280px;
+    /* Aumentado o tamanho da imagem da capa do filme */
+    height: 200px;
+    object-fit: cover;
+}
+
+/* TÍTULOS GERAIS - Alterado para fonte Lato e cor azul sóbria */
+h3,
+h4 {
+    font-family: 'Lato', sans-serif;
+    /* Fonte Lato para profissionalismo */
+    color: #770c42;
+    /* Tom de azul mais sóbrio */
+    font-size: 2em;
+    
+    text-align: left;
+    margin-top: 80px;
+    /* Aumenta o espaço superior para separar as seções */
+    margin-bottom: 40px;
+}
+
+.titulo-destaque {
+    font-family: 'Georgia', serif;
+    color: #4a1b50;
+    text-align: left;
+    font-size: 2em;
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+h4.title {
+    font-size: 2.2em;
+
+}
+
+
+h2 {
+    font-family: 'Lato', sans-serif;
+    color: #0d112e;
+    text-align: left;
+    font-size: 1.56em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.container-imagem-bolo {
+    text-align: left;
+    margin: 20px 0 5px 0;
+    width: 100%;
+    max-width: 300px;}
+    
+.imagem-bolo {
+    display: block;
+    margin-top: 0;
+    /* Margem superior, ajuste conforme necessário para aproximar */
+    margin-bottom: 0;
+    /* Margem inferior, ajuste conforme necessário */
+    max-width: 100%;
+    /* Garante que a imagem não ultrapasse a largura do seu container (.container-imagem-bolo) */
+    height: auto;
+    /* Mantém a proporção da imagem */
+    border-radius: 8px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    /* Sombreamento */
+    /* width: 100%; <-- NÃO adicione uma largura fixa aqui, deixe o max-width: 100% atuar */
+}
+
+
+h4.titulo-4-motivos {
+    font-style: italic;
+    text-align: left;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    color: #101425;
+}
+
+/* Estilização para a página "Sobre mim.html" */
+body#sobre-mim {
+    background-color: #811785;
+    color: #FFFFFF;
+}
+
